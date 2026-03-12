@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:5000";
+const API_URL = "https://ai-interview-platform-5tom.onrender.com";
 
 
 async function apiRequest(endpoint, method="GET", body=null){
