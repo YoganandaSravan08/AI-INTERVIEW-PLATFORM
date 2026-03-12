@@ -6,7 +6,7 @@ An AI-powered full stack web application that helps students practice technical 
 
 ## 🚀 Live Demo
 
-🔗 Frontend: https://ai-interview-frontend-ka0.onrender.com
+🔗 Frontend: https://ai-interview-frontend-lka0.onrender.com
 🔗 Backend API: https://ai-interview-platform-5tom.onrender.com
 
 ---
