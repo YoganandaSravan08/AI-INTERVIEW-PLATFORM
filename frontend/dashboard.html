@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dashboard</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body class="bg-gray-900 text-white flex" onload="loadDashboard();">
+
+<!-- Sidebar -->
+<div class="w-64 h-screen bg-gray-800 p-6">
+
+<h2 class="text-2xl font-bold mb-8">AI Interview</h2>
+
+<ul class="space-y-4">
+
+<li>
+<a href="dashboard.html" class="hover:text-blue-400">Dashboard</a>
+</li>
+
+<li>
+<a href="resume.html" class="hover:text-blue-400">Resume Analyzer</a>
+</li>
+
+<li>
+<a href="interview.html" class="hover:text-blue-400">Mock Interview</a>
+</li>
+
+<li>
+<a href="history.html" class="hover:text-blue-400">Interview History</a>
+</li>
+
+<li>
+<button onclick="logout()" class="text-red-400">Logout</button>
+</li>
+
+</ul>
+
+</div>
+
+<!-- Main Content -->
+<div class="flex-1 p-10">
+
+<h1 class="text-3xl mb-8">Dashboard</h1>
+
+<!-- Stats Cards -->
+
+<div class="grid grid-cols-3 gap-6 mb-10">
+
+<div class="bg-gray-800 p-6 rounded-lg">
+<h3>Total Interviews</h3>
+<p id="totalInterviews" class="text-2xl font-bold">0</p>
+</div>
+
+<div class="bg-gray-800 p-6 rounded-lg">
+<h3>Average Score</h3>
+<p id="avgScore" class="text-2xl font-bold">0</p>
+</div>
+
+<div class="bg-gray-800 p-6 rounded-lg">
+<h3>Best Score</h3>
+<p id="bestScore" class="text-2xl font-bold">0</p>
+</div>
+
+</div>
+
+<!-- Chart -->
+
+<div class="bg-gray-800 p-6 rounded-lg">
+
+<h3 class="mb-4">Interview Score Progress</h3>
+
+<canvas id="scoreChart"></canvas>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Resume Analyzer</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-900 text-white p-10" onload="checkAuth(); loadDashboard();">
+
+<h1 class="text-3xl mb-6">Resume Analyzer</h1>
+
+<input type="file" id="resume" class="mb-4">
+
+<button onclick="uploadResume()"
+class="bg-blue-500 px-4 py-2 rounded hover:bg-blue-600">
+
+Analyze Resume
+
+</button>
+
+<div id="analysis" class="mt-8 bg-gray-800 p-6 rounded"></div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
