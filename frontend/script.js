@@ -74,7 +74,7 @@ if(response.ok){
 
 alert("Signup successful!");
 
-window.location.href = "login.html";
+window.location.href = "verify.html.html";
 
 }else{
 
@@ -370,5 +370,45 @@ localStorage.removeItem("userId");
 localStorage.removeItem("questions");
 
 window.location.href="login.html";
+
+}
+async function verifyOTP(){
+
+const email = document.getElementById("email").value;
+const otp = document.getElementById("otp").value;
+
+try{
+
+const response = await fetch(`${API_URL}/api/auth/verify-otp`,{
+
+method:"POST",
+headers:{
+"Content-Type":"application/json"
+},
+body:JSON.stringify({
+email,
+otp
+})
+
+});
+
+const data = await response.json();
+
+if(response.ok){
+
+alert("Email verified successfully!");
+window.location.href="login.html";
+
+}else{
+
+alert(data.message);
+
+}
+
+}catch(error){
+
+alert("Verification failed");
+
+}
 
 }
