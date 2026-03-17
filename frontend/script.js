@@ -99,6 +99,12 @@ async function login(){
 
 const email = document.getElementById("email").value;
 const password = document.getElementById("password").value;
+const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+if(!emailPattern.test(email)){
+    alert("Please enter valid email address");
+    return;
+}
 
 try{
 
