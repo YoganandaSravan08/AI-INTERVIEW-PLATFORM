@@ -71,10 +71,12 @@ password
 const data = await response.json();
 
 if(response.ok){
+ alert(data.message);   // OTP sent message
 
-alert("Signup successful!");
+    // save email for OTP page
+    localStorage.setItem("verifyEmail", email);
 
-window.location.href = "verify.html.html";
+    window.location.href = "verify.html";
 
 }else{
 
