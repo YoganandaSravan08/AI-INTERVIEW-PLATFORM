@@ -1,8 +1,10 @@
 const nodemailer = require("nodemailer");
 
-// create transporter
+// create transporter (UPDATED)
 const transporter = nodemailer.createTransport({
-  service: "gmail",
+  host: "smtp.gmail.com",
+  port: 587,
+  secure: false,
   auth: {
     user: process.env.EMAIL_USER,
     pass: process.env.EMAIL_PASS
@@ -29,7 +31,7 @@ const sendOTP = async (email, otp) => {
 
   } catch (error) {
 
-    console.log("❌ Mail Sending Failed:", error.message);
+    console.log("❌ Mail Sending Failed:", error);
 
   }
 };
